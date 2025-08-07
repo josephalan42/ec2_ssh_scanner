@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSH Risk Scan Results</title>
+</head>
+<body>
+    <h2>Security Groups Allowing Port 22 (SSH)</h2>
+
+    {% if results %}
+        <ul>
+            {% for group in results %}
+                <li>{{ group }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No security groups found with port 22 open.</p>
+    {% endif %}
+</body>
+</html>

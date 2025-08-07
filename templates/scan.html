@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan EC2 Security Groups</title>
+</head>
+<body>
+    <h2>Scan for Security Groups Allowing Port 22 (SSH)</h2>
+
+    <form method="POST" action="{{ url_for('scan_ec2_instances') }}">
+        <button type="submit">Run Scan</button>
+    </form>
+
+    {% if results %}
+        <h3>⚠️ Security Groups with Port 22 Open:</h3>
+        <ul>
+            {% for group in results %}
+                <li>{{ group }}</li>
+            {% endfor %}
+        </ul>
+    {% elif results is not none %}
+        <p>No security groups with port 22 found.</p>
+    {% endif %}
+</body>
+</html>
