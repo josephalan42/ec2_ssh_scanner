@@ -4,6 +4,10 @@ This tool scans all EC2 security groups across your AWS account and detects any 
 
 ---
 
+## Screenshots
+![alt_text](https://github.com/josephalan42/ec2_ssh_scanner/blob/main/images/Dashboard_ssh_scan.png)
+![alt_text](https://github.com/josephalan42/ec2_ssh_scanner/blob/main/images/result.png)
+
 ## 🔍 Features
 
 * Detects SSH open to `0.0.0.0/0`
